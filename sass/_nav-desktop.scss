@@ -1,0 +1,55 @@
+.nav-desktop {
+    display: none;
+
+    @include mq(xxsmall-landscape) {
+        @media (hover: hover) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            left: 50%;
+            top: 0;
+            width: 100vw;
+            height: 12vh;
+            background-color: #606;
+            transform: translateX(-50%);
+            transition: 1s;
+            z-index: 100;
+
+            .fa-angle-double-left, .fa-angle-double-right {
+                margin: 0 1vw;
+                font-size: 3rem;            
+            }
+
+            .active-arrow {
+                color: #0f0;
+                transition: .2s;
+                cursor: pointer;
+            }
+
+            .active-arrow:hover {
+                text-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 4vh #fff;
+            }
+
+            .nav__links--desktop {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h1 {
+                    font-size: 1.5rem;
+                    transition: .2s;
+                    cursor: pointer;
+                }
+
+                h1:hover {
+                    text-shadow: 0 0 1vh #fff, 0 0 2vh #fff, 0 0 4vh #fff;
+                }
+
+                .active-link {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
